@@ -1,6 +1,6 @@
 package neetw.service.youbike;
 
-public class YouBikeHttpUnit{
+public class YouBikeStationUnit {
     String stationName;
     int availNum;
     int emptyNum;

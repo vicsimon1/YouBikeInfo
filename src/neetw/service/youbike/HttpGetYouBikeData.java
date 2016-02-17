@@ -7,10 +7,14 @@ import java.net.URL;
 import java.util.Hashtable;
 
 public class HttpGetYouBikeData { 
-
-	public Hashtable<String, YouBikeHttpUnit> getYouBikeData(String inputUrl) {
-		//"http://taipei.youbike.com.tw/cht/f12.php?loc=ntpc"
-		Hashtable<String, YouBikeHttpUnit> YouBikeHttpData = new Hashtable<String, YouBikeHttpUnit>(); 
+	/**
+	 * 
+	 * @param inputUrl for example: "http://taipei.youbike.com.tw/cht/f12.php?loc=ntpc"
+	 * @return Hashtable of all stations in request location
+	 */
+	public Hashtable<String, YouBikeStationUnit> getYouBikeData(String inputUrl) {
+		//
+		Hashtable<String, YouBikeStationUnit> YouBikeHttpData = new Hashtable<String, YouBikeStationUnit>(); 
 		try {
 			URL url = new URL(inputUrl);
 			HttpURLConnection huc = (HttpURLConnection)url.openConnection();
@@ -30,7 +34,7 @@ public class HttpGetYouBikeData {
 				try {
 					String[] httpgetBikeUnit_spilt = 
 							httpgetBikeUnit[temp_a].split("</td><td style=\"width:20%\">"); 
-					YouBikeHttpUnit temp_obj = new YouBikeHttpUnit();
+					YouBikeStationUnit temp_obj = new YouBikeStationUnit();
 					 
 					temp_obj.setStationName(httpgetBikeUnit_spilt[1]);
 					temp_obj.setAvailNum(Integer.parseInt(httpgetBikeUnit_spilt[2]));  

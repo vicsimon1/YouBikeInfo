@@ -4,15 +4,20 @@ import java.util.Hashtable;
 
 public class Demo {
 
-	String[] Localtion = {"taipei", "ntpc", "taichung", "chcg", "tycg"};
-	
-	public static void main(String[] args) { 
-		HttpGetYouBikeData myBike = new HttpGetYouBikeData();
-		Hashtable<String, YouBikeHttpUnit> table = 
-				myBike.getYouBikeData("http://taipei.youbike.com.tw/cht/f12.php?loc=ntpc");
+	public static void main(String[] args) {   
+		
+		YouBikeStationViewer youbikeViewer = new YouBikeStationViewer();
+		/*Hashtable<String, YouBikeStationUnit> table = 
+				youbikeViewer.getYouBikeStations(YouBikeConstent.YOUBIKESITE[1]); 
+		
 		System.out.println(table);
-		YouBikeHttpUnit u = table.get("溪洲公園停車場");
-		System.out.println(u.getEmptyNum());
+		YouBikeStationUnit u = table.get("溪洲公園停車場");
+		System.out.println(u.getEmptyNum());*/
+		 
+		
+		Hashtable<String, Integer> table2 = 
+				youbikeViewer.getYouBikeAvailNum(YouBikeConstent.YOUBIKESITE[3]);
+		System.out.println(table2);
 		
 	}
 
