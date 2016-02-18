@@ -1,14 +1,23 @@
 package neetw.service.youbike;
 
 public class YouBikeStationUnit {
-    String stationName;
+	String zoneName;
+	String stationName; 
     int availNum;
-    int emptyNum;
-
+    int emptyNum; 
+    
+    public String getZoneName() {
+        return zoneName;
+    }
+    
     public String getStationName() {
         return stationName;
     }
 
+    public void setZoneName(String zoneName) {
+        this.zoneName = zoneName;
+    }
+    
     public void setStationName(String stationName) {
         this.stationName = stationName;
     }
