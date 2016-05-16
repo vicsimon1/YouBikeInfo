@@ -1,4 +1,4 @@
-package neetw.service.youbike;
+package neetw.service.youbike.model;
 
 public class YouBikeStationUnit {
 	String zoneName;
@@ -9,7 +9,7 @@ public class YouBikeStationUnit {
     public String getZoneName() {
         return zoneName;
     }
-    
+     
     public String getStationName() {
         return stationName;
     }

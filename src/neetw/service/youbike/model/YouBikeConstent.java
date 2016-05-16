@@ -1,4 +1,4 @@
-package neetw.service.youbike;
+package neetw.service.youbike.model;
 
 /**
  * define the URL of YouBike info in diferent area
