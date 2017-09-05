@@ -1,10 +1,10 @@
-package neetw.service.youbike;
+package neetw.service.youbike.test;
 
 import java.util.Hashtable;
 import javax.json.JsonArray;
 import neetw.service.youbike.config.YouBikeConstant;
 import neetw.service.youbike.service.YouBikeInfoEmitter;
-import neetw.service.youbike.service.YouBikeInfoViewer;
+import neetw.service.youbike.test.DaoExample;
 
 public class Demo {
 
@@ -12,9 +12,11 @@ public class Demo {
 
         YouBikeInfoEmitter youBikeInfoEmitter = new YouBikeInfoEmitter();
 
+        // add any custom Observer
         DaoExample daoExample = new DaoExample();
         youBikeInfoEmitter.addObserver(daoExample);
 
+        // call this to update data for official YouBike website
         youBikeInfoEmitter.updateData(YouBikeConstant.YOUBIKE_TAICHUNG);
 
         Hashtable<String, Integer> table = youBikeInfoEmitter.getYouBikeAvailNum();

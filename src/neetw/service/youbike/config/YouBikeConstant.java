@@ -1,10 +1,10 @@
-package neetw.service.youbike.model;
+package neetw.service.youbike.config;
 
 /**
  * define the URL of YouBike info in diferent area
  * @author Victor Tsai
  */
-public class YouBikeConstent { 
+public class YouBikeConstant {
  
 	public static String YOUBIKE_TAIPEI = "http://taipei.youbike.com.tw/cht/f12.php?loc=taipei";
 	public static String YOUBIKE_NEWTAIPEI = "http://taipei.youbike.com.tw/cht/f12.php?loc=ntpc";

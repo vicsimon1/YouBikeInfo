@@ -1,4 +1,4 @@
-package neetw.service.youbike;
+package neetw.service.youbike.test;
 
 import neetw.service.youbike.service.YouBikeInfoEmitter;
 

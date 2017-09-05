@@ -9,8 +9,6 @@ import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 
-import neetw.service.youbike.model.YouBikeConstent;
-
 
 public class HtmlDataParser {
 	
@@ -55,7 +53,7 @@ public class HtmlDataParser {
 				jsonReader.close();
 			}
 			resultJsonArray = resultJsonArrayBuilder.build();
-			JsonObject newObj = resultJsonArray.getJsonObject(5);
+			//JsonObject newObj = resultJsonArray.getJsonObject(5);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

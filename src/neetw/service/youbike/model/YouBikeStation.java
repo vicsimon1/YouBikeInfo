@@ -1,6 +1,6 @@
 package neetw.service.youbike.model;
 
-public class YouBikeStationUnit {
+public class YouBikeStation {
 	private String zoneName;
     private String stationName;
     private int availNum;
