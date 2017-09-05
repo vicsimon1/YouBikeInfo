@@ -1,10 +1,10 @@
 package neetw.service.youbike.model;
 
 public class YouBikeStationUnit {
-	String zoneName;
-	String stationName; 
-    int availNum;
-    int emptyNum; 
+	private String zoneName;
+    private String stationName;
+    private int availNum;
+    private int emptyNum;
     
     public String getZoneName() {
         return zoneName;

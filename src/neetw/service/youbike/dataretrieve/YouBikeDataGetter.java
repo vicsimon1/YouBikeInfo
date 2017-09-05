@@ -1,9 +1,5 @@
-package neetw.service.youbike;
+package neetw.service.youbike.service;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Hashtable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
