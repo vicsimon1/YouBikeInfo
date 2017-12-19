@@ -11,14 +11,15 @@ public class Demo {
 	public static void main(String[] args) {
 
         YouBikeInfoEmitter youBikeInfoEmitter = new YouBikeInfoEmitter();
-
+ 
         // add any custom Observer
         DaoExample daoExample = new DaoExample();
         youBikeInfoEmitter.addObserver(daoExample);
 
-        // call this to update data for official YouBike website
+        // call this to update data from official YouBike website
         youBikeInfoEmitter.updateData(YouBikeConstant.YOUBIKE_TAICHUNG);
 
+        // Other data retrive utils
         Hashtable<String, Integer> table = youBikeInfoEmitter.getYouBikeAvailNum();
         System.out.println("AvailNum: " + table);
 

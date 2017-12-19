@@ -12,7 +12,7 @@ public class YouBikeDataGetter {
 
 	HtmlDataGetter htmlDataGetter = new HtmlDataGetter();
 	HtmlDataParser htmlParser = new HtmlDataParser();
-
+ 
 	/**
 	 * Returns a Hashtable contains info of all YouBike station in selected area
 	 * @param  inputUrl for example: "http://taipei.youbike.com.tw/cht/f12.php?loc=ntpc"
@@ -21,11 +21,11 @@ public class YouBikeDataGetter {
 	public Hashtable<String, YouBikeStation> getYouBikeData(String inputUrl) {
 		Hashtable<String, YouBikeStation> YouBikeHttpData = new Hashtable<String, YouBikeStation>();
 		try { 
-		 
+		  
 			String orgiHTMLData = htmlDataGetter.getYouBikeData(inputUrl);
-			String parsedHTMLData = htmlParser.spiltHtmlData(orgiHTMLData);
+			String parsedHTMLData = htmlParser.decodeUnicode(orgiHTMLData);
 			JsonArray resultJsonArray = htmlParser.parseJsonData(parsedHTMLData);	 
-			
+			 
 			for(int temp_i=1; temp_i<resultJsonArray.size(); temp_i++) {  
 				try {
 					String sna = resultJsonArray.getJsonObject(temp_i).getString("sna");
@@ -57,7 +57,7 @@ public class YouBikeDataGetter {
 
     public JsonArray getYouBikeJsonArray(String inputUrl) {
         String orgiHTMLData = htmlDataGetter.getYouBikeData(inputUrl);
-        String parsedHTMLData = htmlParser.spiltHtmlData(orgiHTMLData);
+        String parsedHTMLData = htmlParser.decodeUnicode(orgiHTMLData);
         JsonArray resultJsonArray = htmlParser.parseJsonData(parsedHTMLData);
 
         return resultJsonArray;

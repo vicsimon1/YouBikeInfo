@@ -37,4 +37,9 @@ public class YouBikeStation {
     public void setEmptyNum(int emptyNum) {
         this.emptyNum = emptyNum;
     }
+    
+    @Override
+    public String toString() {
+    		return  zoneName + " " +  stationName + " " + availNum + " " + emptyNum; 
+    }
 }
