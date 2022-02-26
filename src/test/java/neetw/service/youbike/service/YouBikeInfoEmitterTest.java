@@ -1,4 +1,4 @@
-package service;
+package neetw.service.youbike.service;
 
 import static org.junit.Assert.*;
 

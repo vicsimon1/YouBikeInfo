@@ -1,4 +1,4 @@
-package dataretrive;
+package neetw.service.youbike.dataretrive;
 
 import static org.junit.Assert.*;
 

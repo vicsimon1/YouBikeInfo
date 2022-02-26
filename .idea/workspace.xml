@@ -1,125 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e4bcd702-fa24-41c4-923b-f26c85cf82f3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/neetw/service/youbike/service/YouBikeInfoEmitter.java" afterPath="$PROJECT_DIR$/src/neetw/service/youbike/service/YouBikeInfoEmitter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/neetw/service/youbike/test/DaoExample.java" afterPath="$PROJECT_DIR$/src/neetw/service/youbike/test/DaoExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/neetw/service/youbike/test/Demo.java" afterPath="$PROJECT_DIR$/src/neetw/service/youbike/test/Demo.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouBikeInfo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/YouBikeInfo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/config/YouBikeConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/config/YouBikeConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/dataretrieve/HtmlDataGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/dataretrieve/HtmlDataGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/dataretrieve/HtmlDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/dataretrieve/HtmlDataParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/dataretrieve/YouBikeDataGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/dataretrieve/YouBikeDataGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/model/YouBikeStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/model/YouBikeStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/service/YouBikeInfoEmitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/service/YouBikeInfoEmitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/test/DaoExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/test/DaoExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/neetw/service/youbike/test/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/neetw/service/youbike/test/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/dataretrive/HtmlDataGetterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/neetw/service/youbike/dataretrive/HtmlDataGetterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/dataretrive/HtmlDataParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/neetw/service/youbike/dataretrive/HtmlDataParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/dataretrive/YouBikeDataGetterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/neetw/service/youbike/dataretrive/YouBikeDataGetterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/service/YouBikeInfoEmitterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/neetw/service/youbike/service/YouBikeInfoEmitterTest.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/test/Demo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DaoExample.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/test/DaoExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YouBikeInfoEmitter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/service/YouBikeInfoEmitter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1044#1045#0" expanded="true" />
-                <element signature="e#1090#1091#0" expanded="true" />
-                <element signature="e#2834#2835#0" expanded="true" />
-                <element signature="e#2904#2905#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HtmlDataGetter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/dataretrieve/HtmlDataGetter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HtmlDataParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/dataretrieve/HtmlDataParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YouBikeDataGetter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/dataretrieve/YouBikeDataGetter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YouBikeConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/config/YouBikeConstant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YouBikeStation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/neetw/service/youbike/model/YouBikeStation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-              <folding>
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,11 +34,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/../../FireBase/rdbDemo1" value="1485108810000" />
+        <entry key="$USER_HOME$/FireBase/rdbDemo1" value="1485108810000" />
       </map>
     </option>
     <option name="externalProjectsViewState">
@@ -163,10 +68,14 @@
       </list>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectId" id="25eQLrTdGllMciSQqUvM1NgeARC" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -210,17 +119,21 @@
       <pane id="Scratches" />
     </panes>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.java.neetw.service" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -230,78 +143,35 @@
       <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SbtLocalSettings">
@@ -309,9 +179,7 @@
       <projects_view />
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e4bcd702-fa24-41c4-923b-f26c85cf82f3" name="Default" comment="" />
@@ -352,12 +220,16 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
