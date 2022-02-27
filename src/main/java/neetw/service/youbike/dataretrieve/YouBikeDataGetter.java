@@ -1,66 +1,71 @@
 package neetw.service.youbike.dataretrieve;
 
-import java.util.Hashtable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.json.JsonArray;
-
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import neetw.service.youbike.config.YouBikeConstant;
 import neetw.service.youbike.model.YouBikeStation;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class YouBikeDataGetter {
 
-	HtmlDataGetter htmlDataGetter = new HtmlDataGetter();
-	HtmlDataParser htmlParser = new HtmlDataParser();
- 
 	/**
-	 * Returns a Hashtable contains info of all YouBike station in selected area
-	 * @param  inputUrl for example: "http://taipei.youbike.com.tw/cht/f12.php?loc=ntpc"
-	 * @return Hashtable of all stations in request location
+	 * Returns a Map contains info of all YouBike stations
 	 */ 
-	public Hashtable<String, YouBikeStation> getYouBikeData(String inputUrl) {
-		Hashtable<String, YouBikeStation> YouBikeHttpData = new Hashtable<String, YouBikeStation>();
-		try { 
-		  
-			String orgiHTMLData = htmlDataGetter.getYouBikeData(inputUrl);
-			String parsedHTMLData = htmlParser.decodeUnicode(orgiHTMLData);
-			JsonArray resultJsonArray = htmlParser.parseJsonData(parsedHTMLData);	 
-			 
-			for(int temp_i=1; temp_i<resultJsonArray.size(); temp_i++) {  
-				try {
-					String sna = resultJsonArray.getJsonObject(temp_i).getString("sna");
-					String sarea = resultJsonArray.getJsonObject(temp_i).getString("sarea");
-					String sbi = resultJsonArray.getJsonObject(temp_i).getString("sbi");
-					String tot = resultJsonArray.getJsonObject(temp_i).getString("tot");
-					 
-					YouBikeStation temp_obj = new YouBikeStation();
-					temp_obj.setZoneName(sarea); 
-					temp_obj.setStationName(sna);
-					temp_obj.setAvailNum(Integer.parseInt(sbi));  
-					temp_obj.setEmptyNum(Integer.parseInt(tot)-Integer.parseInt(sbi));  
-					YouBikeHttpData.put(sna, temp_obj); 
-					 
-				} catch (Exception e) {  
-					Logger log = Logger.getLogger(YouBikeDataGetter.class.getName());
-					log.log(Level.SEVERE, e.toString(), e);
-					return null;
-				}  
-			}  
-			
-		} catch (Exception e) {   
-			Logger log = Logger.getLogger(YouBikeDataGetter.class.getName());
-			log.log(Level.SEVERE, e.toString(), e);
-			return null; 
-		} 
-		return YouBikeHttpData; 
+	public Map<String, YouBikeStation> getAllYouBikeStations() {
+		Map<String, YouBikeStation>  tp = getTaipeiYouBikeStations(YouBikeConstant.TAIPEI_APIURL);
+		Map<String, YouBikeStation> ntp = getNewTaipeiYouBikeStations(YouBikeConstant.NEW_TAIPEI_APIURL);
+		tp.putAll(ntp);
+		return tp;
 	}
 
-    public JsonArray getYouBikeJsonArray(String inputUrl) {
-        String orgiHTMLData = htmlDataGetter.getYouBikeData(inputUrl);
-        String parsedHTMLData = htmlParser.decodeUnicode(orgiHTMLData);
-        JsonArray resultJsonArray = htmlParser.parseJsonData(parsedHTMLData);
+	private String getHttpData(String url) {
+		String jsonData = "";
+		try {
+			OkHttpClient client = new OkHttpClient();
+			Request request = new Request.Builder().url(url).build();
+			Response responses = client.newCall(request).execute();
+			jsonData = responses.body().string();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return jsonData;
+	}
 
-        return resultJsonArray;
-    }
+	public Map<String, YouBikeStation> getTaipeiYouBikeStations(String url) {
+		Map<String, YouBikeStation> result = new HashMap<>();
+		String jsonData = getHttpData(url);
+		JsonElement jsonElement = new JsonParser().parse(jsonData);
+		JsonObject jsonObject = jsonElement.getAsJsonObject();
+		JsonObject mJson = jsonObject.getAsJsonObject("retVal");
+		Set<Map.Entry<String, JsonElement>> entries = mJson.entrySet();
+		for (Map.Entry<String, JsonElement> entry: entries) {
+			Gson gson = new Gson();
+			YouBikeStation youBikeStation = gson.fromJson(entry.getValue(), YouBikeStation.class);
+			result.put(youBikeStation.getSno(), youBikeStation);
+		}
+		return result;
+	}
+
+	public Map<String, YouBikeStation> getNewTaipeiYouBikeStations(String url) {
+		Map<String, YouBikeStation> result = new HashMap<>();
+		String jsonData = getHttpData(url);
+		JsonElement jsonElement = new JsonParser().parse(jsonData);
+		com.google.gson.JsonArray jsonArr = jsonElement.getAsJsonArray();
+		for (int i = 0; i < jsonArr.size(); i++) {
+			JsonObject mJson = jsonArr.get(i).getAsJsonObject();
+			Gson gson = new Gson();
+			YouBikeStation youBikeStation = gson.fromJson(mJson, YouBikeStation.class);
+			result.put(youBikeStation.getSno(), youBikeStation);
+		}
+		return result;
+	}
 
 }

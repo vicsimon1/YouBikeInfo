@@ -1,26 +1,10 @@
 package neetw.service.youbike.config;
 
 /**
- * define the URL of YouBike info in diferent area
+ * define the URL of YouBike info in different area
  * @author Victor Tsai
  */
 public class YouBikeConstant {
-	 
-	public static String YOUBIKE_TAIPEI = "taipei";
-	 
-	public static String YOUBIKE_NEWTAIPEI = "ntpc";
-	 
-	public static String YOUBIKE_TAICHUNG = "taichung";
-	 
-	public static String YOUBIKE_CHANGHUA = "chcg";
- 
-	public static String YOUBIKE_TAOYUAN = "tycg";
-	
-	public static String YOUBIKE_HSINCHU = "hccg";
-	
-	public static String YOUBIKE_APIURL = "https://apis.youbike.com.tw/useAPI";
-	
-	public static String YOUBIKE_APILANG = "tw";
-	 
-	public static String YOUBIKE_API_ACTION = "ub_site_by_sno_class";
+	public static String TAIPEI_APIURL = "https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json";
+	public static String NEW_TAIPEI_APIURL = "https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json?page=0&size=1000";
 }

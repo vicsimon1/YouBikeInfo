@@ -1,32 +1,22 @@
 # YouBikeInfo
-A library to help you retrieve YouBike(Taiwan) stations info from the official YouBike website. 
-Implement Observer Pattern, can be used in DAO data update, screen data refresh, etc.
+Help you to retrieve YouBike stations realtime data in Taipei/New Taipei. 
 
 ## Usage
 
 ```java
-YouBikeInfoEmitter youBikeInfoEmitter = new YouBikeInfoEmitter();
+YouBikeDataGetter youBikeDataGetter = new YouBikeDataGetter();
 
-// add any custom Observer 
-DaoExample daoExample = new DaoExample();
-youBikeInfoEmitter.addObserver(daoExample);
+Map<String, YouBikeStation> result =  youBikeDataGetter.getAllYouBikeStations();
 
-// call this to update data from official YouBike website
-youBikeInfoEmitter.updateData(YouBikeConstant.YOUBIKE_TAICHUNG);
+System.out.println("station 0003: " + result.get("0003").toString());
 
-// Other data retrive utils
-Hashtable<String, Integer> table = youBikeInfoEmitter.getYouBikeAvailNum();
-System.out.println("AvailNum: " + table);
+// output: 
+// station 0003: YouBikeStation(sno=0003, sna=台北市政府, tot=40, sbi=0, 
+// sarea=信義區, mday=20220208083416, lat=25.037798, lng=121.56517, 
+// ar=台北市政府東門(松智路) (鄰近信義商圈/台北探索館), sareaen=Xinyi Dist., 
+// snaen=Taipei City Hall, aren=Taipei City Government Eastgate (Song Zhi Road), 
+// bemp=0, act=1)
 
-Hashtable<String, Integer> table2 = youBikeInfoEmitter.getYouBikeEmptyNum();
-System.out.println("EmptyNum: " + table2);
-
-Hashtable<String, String> table3 = youBikeInfoEmitter.getYouBikeZoneName();
-System.out.println("ZoneName: " + table3);
-
-JsonArray array1 = youBikeInfoEmitter.getYouBikeJsonArray(YouBikeConstant.YOUBIKE_TAICHUNG);
-System.out.println("JsonArray: " + array1);
- 
 ```
 
 ##Authors
