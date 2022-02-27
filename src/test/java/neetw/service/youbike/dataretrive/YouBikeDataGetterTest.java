@@ -13,6 +13,9 @@ public class YouBikeDataGetterTest {
 	public void test() {
 		Map<String, YouBikeStation> result =  youBikeDataGetter.getAllYouBikeStations();
 		assertTrue(result.size()>10);
+
+		Map<String, YouBikeStation> result2 =  youBikeDataGetter.getAllYouBike2Stations();
+		assertTrue(result2.size()>10);
 	}
 
 }

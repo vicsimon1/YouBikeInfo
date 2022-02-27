@@ -6,7 +6,7 @@ Help you to retrieve YouBike stations realtime data in Taipei/New Taipei.
 ```java
 YouBikeDataGetter youBikeDataGetter = new YouBikeDataGetter();
 
-Map<String, YouBikeStation> result =  youBikeDataGetter.getAllYouBikeStations();
+Map<String, YouBikeStation> result = youBikeDataGetter.getAllYouBikeStations();
 
 System.out.println("station 0003: " + result.get("0003").toString());
 

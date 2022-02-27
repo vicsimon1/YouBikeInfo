@@ -20,10 +20,44 @@ public class YouBikeDataGetter {
 	 * Returns a Map contains info of all YouBike stations
 	 */ 
 	public Map<String, YouBikeStation> getAllYouBikeStations() {
-		Map<String, YouBikeStation>  tp = getTaipeiYouBikeStations(YouBikeConstant.TAIPEI_APIURL);
-		Map<String, YouBikeStation> ntp = getNewTaipeiYouBikeStations(YouBikeConstant.NEW_TAIPEI_APIURL);
+		Map<String, YouBikeStation> tp = getTaipeiYouBikeStations();
+		Map<String, YouBikeStation> ntp = getNewTaipeiYouBikeStations();
 		tp.putAll(ntp);
 		return tp;
+	}
+
+	public Map<String, YouBikeStation> getAllYouBike2Stations() {
+		Map<String, YouBikeStation> tp = getTaipeiYouBike2Stations();
+		Map<String, YouBikeStation> ntp = getNewTaipeiYouBike2Stations();
+		tp.putAll(ntp);
+		return tp;
+	}
+
+	public Map<String, YouBikeStation> getTaipeiYouBikeStations() {
+		Map<String, YouBikeStation> result = new HashMap<>();
+		String jsonData = getHttpData(YouBikeConstant.TAIPEI_APIURL);
+		JsonElement jsonElement = new JsonParser().parse(jsonData);
+		JsonObject jsonObject = jsonElement.getAsJsonObject();
+		JsonObject mJson = jsonObject.getAsJsonObject("retVal");
+		Set<Map.Entry<String, JsonElement>> entries = mJson.entrySet();
+		for (Map.Entry<String, JsonElement> entry: entries) {
+			Gson gson = new Gson();
+			YouBikeStation youBikeStation = gson.fromJson(entry.getValue(), YouBikeStation.class);
+			result.put(youBikeStation.getSno(), youBikeStation);
+		}
+		return result;
+	}
+
+	public Map<String, YouBikeStation> getTaipeiYouBike2Stations() {
+		return getFromJSONArrayResponse(YouBikeConstant.TAIPEI_2_APIURL);
+	}
+
+	public Map<String, YouBikeStation> getNewTaipeiYouBikeStations() {
+		return getFromJSONArrayResponse(YouBikeConstant.NEW_TAIPEI_APIURL);
+	}
+
+	public Map<String, YouBikeStation> getNewTaipeiYouBike2Stations() {
+		return getFromJSONArrayResponse(YouBikeConstant.NEW_TAIPEI_2_APIURL);
 	}
 
 	private String getHttpData(String url) {
@@ -39,22 +73,7 @@ public class YouBikeDataGetter {
 		return jsonData;
 	}
 
-	public Map<String, YouBikeStation> getTaipeiYouBikeStations(String url) {
-		Map<String, YouBikeStation> result = new HashMap<>();
-		String jsonData = getHttpData(url);
-		JsonElement jsonElement = new JsonParser().parse(jsonData);
-		JsonObject jsonObject = jsonElement.getAsJsonObject();
-		JsonObject mJson = jsonObject.getAsJsonObject("retVal");
-		Set<Map.Entry<String, JsonElement>> entries = mJson.entrySet();
-		for (Map.Entry<String, JsonElement> entry: entries) {
-			Gson gson = new Gson();
-			YouBikeStation youBikeStation = gson.fromJson(entry.getValue(), YouBikeStation.class);
-			result.put(youBikeStation.getSno(), youBikeStation);
-		}
-		return result;
-	}
-
-	public Map<String, YouBikeStation> getNewTaipeiYouBikeStations(String url) {
+	private Map<String, YouBikeStation> getFromJSONArrayResponse(String url) {
 		Map<String, YouBikeStation> result = new HashMap<>();
 		String jsonData = getHttpData(url);
 		JsonElement jsonElement = new JsonParser().parse(jsonData);
